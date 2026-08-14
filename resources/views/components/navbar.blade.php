@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-apparelBg/80 backdrop-blur-md border-b border-apparelBorder/80 transition-all duration-300">
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-apparelBg/80 backdrop-blur-md border-b border-apparelBorder/80 shadow-md transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
             
@@ -37,13 +37,13 @@
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="md:hidden bg-apparelBg border-b border-apparelBorder px-4 pt-3 pb-6 space-y-3">
+    <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="md:hidden bg-apparelBg border-b border-apparelBorder px-4 pt-3 pb-6 space-y-3 shadow-inner">
         <a href="{{ route('home') }}" class="block px-3 py-2 rounded-xl text-base font-medium {{ request()->routeIs('home') ? 'bg-apparelCard font-semibold text-apparelAccent shadow-sm' : 'text-apparelMuted hover:bg-apparelCardWarm' }}">Home</a>
         <a href="{{ route('about') }}" class="block px-3 py-2 rounded-xl text-base font-medium {{ request()->routeIs('about') ? 'bg-apparelCard font-semibold text-apparelAccent shadow-sm' : 'text-apparelMuted hover:bg-apparelCardWarm' }}">About</a>
         <a href="{{ route('services') }}" class="block px-3 py-2 rounded-xl text-base font-medium {{ request()->routeIs('services') ? 'bg-apparelCard font-semibold text-apparelAccent shadow-sm' : 'text-apparelMuted hover:bg-apparelCardWarm' }}">Services</a>
         <a href="{{ route('contact') }}" class="block px-3 py-2 rounded-xl text-base font-medium {{ request()->routeIs('contact') ? 'bg-apparelCard font-semibold text-apparelAccent shadow-sm' : 'text-apparelMuted hover:bg-apparelCardWarm' }}">Contact</a>
         <div class="pt-2">
-            <a href="{{ route('services') }}" class="block text-center bg-apparelDark text-apparelBg py-2.5 rounded-full text-base font-medium hover:bg-apparelAccent transition">
+            <a href="{{ route('services') }}" class="block text-center bg-apparelDark text-apparelBg py-2.5 rounded-full text-base font-medium hover:bg-apparelAccent transition shadow-sm">
                 Explore Studio
             </a>
         </div>
