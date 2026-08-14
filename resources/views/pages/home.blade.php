@@ -3,7 +3,8 @@
 @section('content')
 
 <!-- Hero Section with Piles of Clothes Background Image & Intro Animation -->
-<section class="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center overflow-hidden" 
+<!-- Updated to min-h-screen for full-screen height across all devices -->
+<section class="relative min-h-screen flex items-center justify-center bg-cover bg-center overflow-hidden" 
          style="background-image: url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=2000&auto=format&fit=crop');">
     
     <!-- Warm Earthy Overlay -->
@@ -68,17 +69,17 @@
                 
                 <!-- Image 1 -->
                 <div x-show="activeSlide === 1" x-transition.opacity.duration.1000ms class="absolute inset-0">
-                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1000&auto=format&fit=crop" alt="Earthy Minimalist Apparel" class="w-full h-full object-cover">
+                    <img src="{{ asset('product-assets/product-one.png') }}" alt="Product One" class="w-full h-full object-cover">
                 </div>
                 
                 <!-- Image 2 -->
                 <div x-show="activeSlide === 2" x-transition.opacity.duration.1000ms class="absolute inset-0" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1434389670869-c8873cb58c85?q=80&w=1000&auto=format&fit=crop" alt="Premium Fabric Tailoring" class="w-full h-full object-cover">
+                    <img src="{{ asset('product-assets/product-two.png') }}" alt="Product Two" class="w-full h-full object-cover">
                 </div>
                 
                 <!-- Image 3 -->
                 <div x-show="activeSlide === 3" x-transition.opacity.duration.1000ms class="absolute inset-0" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1485230895905-3129753c12b9?q=80&w=1000&auto=format&fit=crop" alt="Sustainable Fashion Wear" class="w-full h-full object-cover">
+                    <img src="{{ asset('product-assets/product-three.png') }}" alt="Product Three" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Gradient Overlay for Contrast -->
